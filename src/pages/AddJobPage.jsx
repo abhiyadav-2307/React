@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 
 const AddJobPage = ({ addJobSubmit }) => {
-    const navigate = useNavigate();
   // State variables for job properties
   const [title, setTitle] = useState("");
   const [type, setType] = useState("Full-Time");
@@ -14,7 +13,9 @@ const AddJobPage = ({ addJobSubmit }) => {
   const [companyName, setCompanyName] = useState("");
   const [companyDescription, setCompanyDescription] = useState("");
   const [contactEmail, setContactEmail] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
+  const [contactPhone, setContactPhone] = useState('');
+  
+  const navigate = useNavigate();
 
 const submitForm = (e)=>{
     e.preventDefault();
@@ -24,12 +25,12 @@ const submitForm = (e)=>{
         location,
         description,
         salary,
-        comapany:{
+        company:{
             name: companyName,
             description: companyDescription,
             contactEmail,
             contactPhone,
-        }
+        },
     }
     addJobSubmit(newJob);
     return navigate('/jobs');

@@ -83,6 +83,48 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "8d5f",
+      "title": "Software Engineer",
+      "type": "Full-Time",
+      "location": "New York",
+      "description": "Develop, test, and maintain software applications. Collaborate with the development team to implement new features and improvements.",
+      "salary": "$90K - 100K",
+      "company": {
+        "name": "Tech Solutions Inc.",
+        "description": "Tech Solutions Inc. is a leading provider of innovative software solutions, specializing in cloud computing and enterprise applications.",
+        "contactEmail": "careers@techsolutions.com",
+        "contactPhone": "123-456-7890"
+      }
+    },
+    {
+      "id": "6af9",
+      "title": "Software Engineer",
+      "type": "Full-Time",
+      "location": "New York",
+      "description": "kjfyvb",
+      "salary": "Under $50K",
+      "company": {
+        "name": "Tech Solutions Inc.",
+        "description": "yfyjgbkh",
+        "contactEmail": "caeers@techsolutions.com",
+        "contactPhone": "123-486-7890"
+      }
+    },
+    {
+      "id": "f256",
+      "title": "waria Software Engineer",
+      "type": "Full-Time",
+      "location": "New York",
+      "description": "lbilhniho",
+      "salary": "Under $50K",
+      "company": {
+        "name": "Tech Solutions Inc.",
+        "description": "ugyhn9 8 7 iy guy guyg ilg ig",
+        "contactEmail": "caeers@techsigiugolutions.com",
+        "contactPhone": "123-48igiug6-7890"
+      }
     }
   ]
 }

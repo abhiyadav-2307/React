@@ -1,30 +1,21 @@
 import React from "react";
-import { useParams, useLoaderData } from "react-router-dom";
-//import { useState, useEffect } from "react";
-//import Spinner from "../components/Spinner";
-import { FaArrowLeft, FaMapMarker} from "react-icons/fa";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
+import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const JobPage = () => {
+
+const JobPage = ({ deleteJob }) => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const job = useLoaderData();
-  // const [job,setJob] = useState(null);
-  // const [loading,setLoading] = useState(true);
+  const onDeleteClick =(jobId)=>{
+    const confirm = window.confirm('Are you sure you want to delete this listing?')
+    if(!confirm) return ;
+    deleteJob(jobId);
+    navigate('/jobs');
 
-  // useEffect(()=>{
-  //     const fetchJob = async ()=>{
-  //         try {
-  //             const res = await fetch(`/api/jobs/${id}`);
-  //             const data = await res.json();
-  //             setJob(data);
-  //           } catch (error) {
-  //             console.log("Error fetching data", error);
-  //           } finally {
-  //             setLoading(false);
-  //           }
-  //     }
-  //     fetchJob();
-  // },[])
+  }
+
   return (
     <>
       {/* <!-- Go Back --> */}
@@ -47,7 +38,7 @@ const JobPage = () => {
                 <div className="text-gray-500 mb-4">{job.type}</div>
                 <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
                 <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
-                  <FaMapMarker className="text-orange-700 mr-1"/>
+                  <FaMapMarker className="text-orange-700 mr-1" />
                   <p className="text-orange-700">{job.location}</p>
                 </div>
               </div>
@@ -101,7 +92,7 @@ const JobPage = () => {
                 >
                   Edit Job
                 </Link>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                <button onClick={ ()=>onDeleteClick(job.id) } className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
                   Delete Job
                 </button>
               </div>
