@@ -1,25 +1,30 @@
 import React from "react";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+const EditJobPage = ({ updateJobSubmit }) => {
+  const job = useLoaderData();
 
-const AddJobPage = ({ addJobSubmit }) => {
   // State variables for job properties
-  const [title, setTitle] = useState("");
-  const [type, setType] = useState("Full-Time");
-  const [location, setLocation] = useState("");
-  const [description, setDescription] = useState("");
-  const [salary, setSalary] = useState("Under $50K");
-  const [companyName, setCompanyName] = useState("");
-  const [companyDescription, setCompanyDescription] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
+  const [title, setTitle] = useState(job.title);
+  const [type, setType] = useState(job.type);
+  const [location, setLocation] = useState(job.location);
+  const [description, setDescription] = useState(job.description);
+  const [salary, setSalary] = useState(job.salary);
+  const [companyName, setCompanyName] = useState(job.company.name);
+  const [companyDescription, setCompanyDescription] = useState(
+    job.company.description
+  );
+  const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
+  const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
 
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const submitForm = (e) => {
     e.preventDefault();
-    const newJob = {
+    const updatedJob = {
+      id,
       title,
       type,
       location,
@@ -32,9 +37,9 @@ const AddJobPage = ({ addJobSubmit }) => {
         contactPhone,
       },
     };
-    addJobSubmit(newJob);
-    toast.success("Job Added Successfully");
-    return navigate("/jobs");
+    updateJobSubmit(updatedJob);
+    toast.success("Job Updated Successfully");
+    return navigate(`/jobs/${id}`);
   };
 
   return (
@@ -233,4 +238,4 @@ const AddJobPage = ({ addJobSubmit }) => {
   );
 };
 
-export default AddJobPage;
+export default EditJobPage;

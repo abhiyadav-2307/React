@@ -60,9 +60,9 @@
       "id": "5",
       "title": "Full Stack React Developer",
       "type": "Full-Time",
-      "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
       "location": "Atlanta, GA",
-      "salary": "$90K - $100K",
+      "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
+      "salary": "Over $200K",
       "company": {
         "name": "Browning Technologies",
         "description": "Browning Technologies is a rapidly growing technology company specializing in e-commerce solutions. We offer a dynamic and collaborative work environment where employees are encouraged to think creatively and innovate.",
@@ -96,34 +96,6 @@
         "description": "Tech Solutions Inc. is a leading provider of innovative software solutions, specializing in cloud computing and enterprise applications.",
         "contactEmail": "careers@techsolutions.com",
         "contactPhone": "123-456-7890"
-      }
-    },
-    {
-      "id": "6af9",
-      "title": "Software Engineer",
-      "type": "Full-Time",
-      "location": "New York",
-      "description": "kjfyvb",
-      "salary": "Under $50K",
-      "company": {
-        "name": "Tech Solutions Inc.",
-        "description": "yfyjgbkh",
-        "contactEmail": "caeers@techsolutions.com",
-        "contactPhone": "123-486-7890"
-      }
-    },
-    {
-      "id": "f256",
-      "title": "waria Software Engineer",
-      "type": "Full-Time",
-      "location": "New York",
-      "description": "lbilhniho",
-      "salary": "Under $50K",
-      "company": {
-        "name": "Tech Solutions Inc.",
-        "description": "ugyhn9 8 7 iy guy guyg ilg ig",
-        "contactEmail": "caeers@techsigiugolutions.com",
-        "contactPhone": "123-48igiug6-7890"
       }
     }
   ]
